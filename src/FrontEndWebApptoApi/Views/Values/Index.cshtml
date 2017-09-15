@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Values";
+}
+
+<h3>Values Invoking</h3>
+
+invocacion de Backend: @ViewBag.Results
+
+@if (ViewBag.ErrorMessage == "AuthorizationRequired")
+{
+    <p>You need to sign in. @Html.ActionLink("here", "SignIn", "Account")</p>
+
+    @ViewBag.ErrorDescription
+
+}
+
+@if (ViewBag.ErrorMessage == "UnexpectedError")
+{
+    <p>Unexpected error ..</p>
+}

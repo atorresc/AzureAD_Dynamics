@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-app="valuesApp" ng-controller="valuesController">
+    <button ng-click="logout()" ng-show="userInfo.isAuthenticated">Logout</button>
+    <button ng-click="login()" ng-hide="userInfo.isAuthenticated">Login</button>
+    <br />
+    <br />
+    Authenticated as: ... {{userInfo}}
+
+
+    <br />
+    <br />
+    <button ng-click="getControllervalue()">Get Values </button>
+    <hr />
+    The Value is: {{backmodel}}<br />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js"></script>
+    <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal-angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
+</html>
